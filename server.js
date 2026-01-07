@@ -18,7 +18,7 @@ app.get("/", async (req, res) => {
     `);
     await conn.end();
 
-    res.send(`<pre>${JSON.stringify(rows, null, 2)}</pre>`);
+    res.send(`<h1>CM3010 COVID Stats</h1><pre>${JSON.stringify(rows, null, 2)}</pre>`);
   } catch (e) {
     res.status(500).send(`<pre>${e.stack || e}</pre>`);
   }
